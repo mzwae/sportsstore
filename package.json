@@ -4,7 +4,10 @@
   },
   "dependencies": {
     "deployd": "^1.0.0",
+    "dpd-clientlib": "^0.0.1",
     "dpd-dashboard": "^0.0.1",
-    "dpd-clientlib": "^0.0.1"
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7"
   }
 }
