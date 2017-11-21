@@ -10,6 +10,14 @@
   <script>
     angular.module('sportsStore', ['customFilters', 'cart', 'ngRoute'])
       .config(function($routeProvider){
+      $routeProvider.when('/complete', {
+        templateUrl: '/views/thankYou.html'
+      }); 
+      
+      $routeProvider.when('/placeorder', {
+        templateUrl: '/views/placeOrder.html'
+      });
+      
       $routeProvider.when('/checkout', {
         templateUrl: '/views/checkoutSummary.html'
       });
@@ -29,6 +37,7 @@
   <script src="filters/customFilters.js"></script>
   <script src="components/cart/car.js"></script>
   <script src="ngmodules/angular-route.js"></script>
+  <script src="controllers/checkoutControllers.js"></script>
 </head>
 
 <body class="container" ng-controller="sportsStoreCtrl">
