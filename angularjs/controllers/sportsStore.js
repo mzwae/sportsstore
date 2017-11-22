@@ -17,9 +17,16 @@ angular.module('sportsStore')
     order.products = cart.getProducts();
     $http
       .post(orderUrl, order)
-      .success()
-      .error()
-      .finally()
+      .success(function(data){
+      $scope.data.orderId = data.id;
+      cart.getProducts().length = 0;
+    })
+      .error(function(error){
+      $scope.data.orderError = error;
+    })
+      .finally(function(){
+      $location.path('/complete');
+    })
     ;
   };
 
