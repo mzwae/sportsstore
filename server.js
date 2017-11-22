@@ -3,7 +3,7 @@ var path = require('path');
 var logger = require('morgan');
 var bodyparser = require('body-parser');
 var app = express();
-app.use(logger('dev'));
+app.use(logger('short'));
 
 
 app.use(bodyparser.json());
